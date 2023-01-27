@@ -1,0 +1,23 @@
+{
+
+  "manifest_version": 2,
+  "name": "Canvas-McGraw Hill Workaround",
+  "version": "1.0",
+
+  "description": "Gets around that weird issue of McGraw hill opening in a new tab not letting you in",
+  
+  "browser_specific_settings": {
+	"gecko": {
+		"id": "{3a40be5c-4fee-43ee-a6a0-329530690f6b}"
+	}
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mhcampus.com/*"],
+      "js": ["scripts/main.js"],
+	  "all_frames":true
+    }
+  ]
+
+}
